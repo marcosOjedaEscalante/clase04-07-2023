@@ -1,4 +1,4 @@
-export class Categorias{
+export default class Categoria{
 
     constructor(categoriaId, categoriaNombre, descripcion){
         this._categoriaId = categoriaId;
@@ -27,7 +27,7 @@ export class Categorias{
     }
 
     set descripcion(descripcion){
-        this._descripcion;
+        this._descripcion = descripcion;
     }
 
 }

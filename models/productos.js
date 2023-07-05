@@ -1,4 +1,4 @@
-export class Productos{
+export default class Productos{
 
     constructor(productoId, productoNombre, categoriaId, precioUnitario, unidadesStock, discontinuado){
         this._productoId = productoId;
