@@ -1,4 +1,5 @@
 import express from 'express';
+import { router } from '../routes/categorias.js';
 
 export default class Server {
 
@@ -14,19 +15,18 @@ export default class Server {
     }
 
     // Middlewares
-    middlewares(){
+    middlewares() {
         this.app.set('view engine', 'hbs');
     }
 
     // Rutas de mi webservice
     routes() {
-        this.app.get('/', (req, res) => {
-            res.render('index');
-        });
+        this.app.use('/categorias', router);
+        
     }
 
     // Escuchando
-    listen(){
+    listen() {
         this.app.listen(this.puerto, () => {
             console.log('WebService corriendo en puerto: ', this.puerto);
         });
