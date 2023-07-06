@@ -80,7 +80,6 @@ const eliminar = (id) => {
         }
     });
     const indice = arregloCategorias.findIndex(categoriaLocal => categoriaLocal.categoriaId == id);
-    console.log(indice);
     arregloCategorias.splice(indice, 1);
     arregloCategorias.forEach(categoria => {
         cadena += `${categoria.categoriaId};${categoria.categoriaNombre};${categoria.descripcion}\n`;
