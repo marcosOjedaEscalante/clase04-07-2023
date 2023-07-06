@@ -87,7 +87,7 @@ const eliminar = (id) => {
     writeFileSync('./datosHoy/categorias.csv', cadena);
 }
 
-exports = {
+export{
     crear,
     leerTodo,
     actualizar,

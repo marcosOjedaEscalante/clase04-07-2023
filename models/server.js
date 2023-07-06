@@ -17,12 +17,13 @@ export default class Server {
     // Middlewares
     middlewares() {
         this.app.set('view engine', 'hbs');
+        this.app.use(express.urlencoded({extended: true}));
+        this.app.use(express.json());
     }
 
     // Rutas de mi webservice
     routes() {
         this.app.use('/categorias', router);
-        
     }
 
     // Escuchando
